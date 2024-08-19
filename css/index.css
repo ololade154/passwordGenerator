@@ -62,3 +62,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+#set {
+  color: #019f55;
+  font-size: 15px;
+}

@@ -5,11 +5,11 @@ const lowerCase = "abcdefghijklmnopqrstuvwxyz"; //lowercase of the letters that 
 const number = "0123456789"; // the numbers that wiil bw generated
 const symbol = "@!#$%&*()?[]{}"; // special characters that will be among the password that will be generated.
 const allCharacters = upperCase + lowerCase + number + symbol;
-
+const currentYear = new Date().getFullYear();
 function createPassword() {
   let passWord = "";
   for (let i = 0; i < lenght; i++) {
-    passWord += allCharacters.charAt(
+    passWord += allCharacters.at(
       Math.floor(Math.random() * allCharacters.length)
     );
   }
@@ -19,3 +19,5 @@ function copyPassword() {
   passwordBox.select();
   document.execCommand("copy"); // Copies the selected text to the clipboard
 }
+document.getElementById("set").innerHTML =
+  "&copy;" + currentYear + "  " + "KEMTECH. All right reserved";
